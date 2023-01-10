@@ -1,0 +1,265 @@
+%%%%%%%%%%%%%%%%
+%%% PROBLEM DESCRIPTION
+%%%%%%%%%%%%%%%%
+\section{PROBLEM DESCRIPTION AND FORMULATION}
+\label{section:problem_desc}
+
+
+
+
+\subsection{Problem Description \& Scope}
+Location optimization problems balance distances with a series of weights to meet the objective function. We will be using a specific type of localization formulation: the Capacitated Multi-Facility Weber Problem (CMFWP) \cite{RN4}. This approach reduces computational power while minimizing transportation and fixed costs. The optimal solution will satisfy discarded blade supply within Ontario by placing facilities in a Euclidean plane and solving the problem in a 2 steps approach. The supply and location of each wind farm are known while the transportation cost between wind farms and facilities are proportional to their Manhattan distance. 
+
+Separately we will look at a "routing problem" based on the travelling salesman method. The idea is to minimize the number and cost of specialized trucks that travel between wind farms to cut the discarded blades into smaller pieces for easier transportation. This is an important step for efficient turbine recycling. 
+
+For simplicity, we will use a long-term approach, as it stabilizes both the supply and capacity of turbine blades. Both problems are limited to Ontario which has a complex network of 108 wind farms. 
+
+
+%%%%%%%%%%%%%%%%
+%%% MODEL ASSUMPTION
+%%%%%%%%%%%%%%%%
+\subsection{Model Assumptions}
+Assumptions were needed to model these problems, which are described in the paragraphs below. 
+
+\subsubsection{Transportation}
+\begin{itemize}[noitemsep]
+  \item We assume that we are renting transportation trucks for delivery. This implies only-way transportation. 
+  \item Ontario's cost of transportation is \$47.5/mile \$29.5/km \cite{RN5}.  
+  \item Transport does not have to be full, and the number of trucks required is rounded up.  For example, in a case where 3.5 trucks are needed, we’ll use 4 trucks. The optimal loading of the trucks is out of scope. 
+  \item We will use Manhattan distance as many rural highways are straight North-South or East-West. 
+  \item Transport trucks have a max load weight of 62.5 tonnes on Canadian Roads \cite{RN6}.
+\end{itemize}
+
+\subsubsection{Waste Details}
+\begin{itemize}[noitemsep]
+  \item Based on our research, we estimate the weight of one blade to be 36 tonnes \cite{RN7} \cite{RN8}.
+  \item We assume that all the wind turbines are the same, I.e., the newest generation. 
+  \item Each wind turbine is made of 3 blades (standard).  
+  \item The blades have an average life of 20 years.
+\end{itemize}
+
+\subsubsection{Facilities}
+\begin{itemize}[noitemsep]
+    \item Fixed cost is based on a per tonne capacity and economies of scale with 3 types of facilities \cite{RN9} \cite{RN13}
+    \begin{itemize}[noitemsep]
+        \item Small: 3,000 tonnes capacity \$3.3 million 
+        \item Medium: 4,500 tonnes capacity \$4.62 million (estimate) 
+        \item Large capacity: 6,000 tonnes capacity \$5.94 million (estimate) 
+    \end{itemize}
+    \item Facilities can be placed anywhere except cities and water.  
+    \item Based on the assumption stated above, we will not need to worry about negotiating land.
+\end{itemize}    
+\subsubsection{Cutting Trucks}
+\begin{itemize}[noitemsep]
+  \item Based on the waste assumption and calculation, we assume that we need to cut 400 blades per year. 
+  \begin{itemize}[noitemsep]
+      \item
+      Total number of turbines in the province * 5\% yearly waste * 3 blades per turbine. 
+  \end{itemize} 
+  \item The annual capacity of cutting trucks is 300 blades, based on estimates. No official value was found.
+  \item Travel cost for cutting trucks is estimated at \$29.5/km of distance travel. 
+\end{itemize}
+
+\subsection{Model Limitations}
+\begin{itemize}[noitemsep]
+  \item We focus on Ontario for this study as it accounts for 40\% of total wind energy production in Canada. 
+  \item Each province will have different legislation and subsidies around the facility locations. 
+  \item We assume that the storage of blades is not in scope. Therefore, waste storage has no cost. 
+  \item There will be no significant long-term changes to the number of wind farms. This allows us to estimate the waste of wind farms as a constant. Every year 5\% of the wind farms’ blades need to be replaced. 
+  \item We assume that each longitude and latitude degree is approximately 111 kilometers (about 68.97 mi).  
+  \item We Look at a 50-year timeframe 
+  \begin{itemize}[noitemsep]
+    \item The 50 years period smooths the lumpy supply for a pseudo-steady state supply and demand. 
+    \item It helps to balance the cost of transportation and the cost of site construction. 
+    \item We multiply the transportation cost by 50 to ensure it considers the 50 years period.
+  \end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% RECYCLING FACILITIES LOCATION PROBLEM
+%%%%%%%%%%%%%%%%
+\subsection{Recycling Facilities Location Problem }
+\subsubsection{Model Formulation}
+We solve this model in a two-stage approach to simplify the computational demands. Each stage contains generic model components and components only relevant to the stage.
+\begin{enumerate}[noitemsep]
+   \item Assign the entire supply of each wind turbine to a specific facility. 
+   \item  Enforce the location of each facility and redistribute wind farm supply.
+\end{enumerate}
+
+
+%%% SETS
+\subsubsection{Sets}
+\begin{itemize} [noitemsep]
+    \item $W$ - wind farm
+    \item $T$ - facility type
+    \item $F$ - facility count $ \in \{1,2...,10 \} $
+\end{itemize}
+
+
+%%% DATA PARAMETERS
+\newpage
+\subsubsection{Data Requirements}
+\begin{multicols}{2}
+\begin{itemize} [noitemsep]
+    \item $wx_{w}$ - longitude of wind farm $w$
+    \item $wy_{w}$ - latitude of wind farm $w$
+    \item $wd_{w}$ - yearly deliveries from wind farm $w$
+    \item $ww_{w}$ - yearly waste per delivery from $w$
+
+    \item $co_{t}$ - building cost of facility of type $t$
+    \item $ca_{t}$ - capacity of facility of type $t$
+
+    \item $dc$ - delivery cost per truck per km
+    \item $ph$ - planning horizon (years)
+    \item $dk$ - conversion of latitude/longitude to km
+\end{itemize}
+\end{multicols}
+
+
+%%% Decision Variables
+\subsubsection{Decision Variables}
+\begin{itemize} [noitemsep]
+    \item $fb_{ft}$ - binary indicating whether facility number $f$ of type $t$ should be built
+    \item $fx_{ft}$ - continuous indicating longitude of facility number $f$ of type $t$
+    \item $fy_{ft}$ - continuous indicating latitude of facility number $f$ of type $t$ 
+
+    \item $dist\_x_{wft}$ - continuous indicating longitude distance between wind farm $w$, facility $f$ of type $t$
+    \item $dist\_y_{wft}$ - continuous indicating latitude distance between wind farm $w$, facility $f$ of type  $t$
+    \item $dist_{wft}$ - continuous  indicating manhattan distance between wind farm $w$, facility $f$ of type $t$ 
+\end{itemize}
+\textbf{Stage 1:} $wa_{wft}$ - binary variable assigning wind farm $w$ to facility $f,t$ \\ 
+\textbf{Stage 2:} $dw_{wft}$ - integer variable indicating how many deliveries to make from $w$ to $f,t$
+
+
+%%% Constraints
+\subsubsection{Constraints}
+Demand
+\vspace{-5pt}
+\begin{equation}
+\begin{aligned}
+	\sum_{t,f} wa_{wft} 	& = & 1  		& \quad \forall w \quad \quad 	& \text{Stage 1} \\ 
+	\sum_{t,f} dw_{wft} 	& = & wd_{w}  	& \quad \forall w \quad \quad 	& \text{Stage 2}
+\end{aligned}
+\end{equation}
+
+Capacity
+\vspace{-5pt}
+\begin{equation}
+\begin{aligned}
+	\sum_{t,f} wa_{wft} * ww_{w} * wd_{w} 	& \le & ca_{t} * fb_{ft}		& \quad \forall w  \quad  	& \text{Stage 1} \\
+        \sum_{w} dw_{wft} * ww_{w} 			& \le & ca_{t} * fb_{ft}  	& \quad \forall f,t \quad	& \text{Stage 2}
+\end{aligned}
+\end{equation}
+
+Distance Calculation
+\vspace{-5pt}
+\begin{equation}
+\begin{aligned}
+	dist\_x_{wft} 	&\ge	& wx_{w} - fx_{ft} 			& \quad \forall w,f,t  \\
+	dist\_x_{wft} 	&\ge	& -( wx_{w} - fx_{ft}) 			&\quad \forall w,f,t  \\
+	dist\_y_{wft} 	&\ge	& wy_{w} - fy_{ft} 			& \quad \forall w,f,t \\
+	dist\_y_{wft} 	&\ge	& -(wy_{w} - fy_{ft}) 			&\quad \forall w,f,t \\
+	dist_{wft} 		&=  	& dist\_x_{wft} + dist\_y_{wft} 	& \quad \forall w,f,t 
+\end{aligned}
+\end{equation}
+
+
+%%% Objective Function
+\subsubsection{Objective Function}
+\vspace{-15pt}
+\begin{equation}
+\begin{aligned}
+	min	\quad 	&	\sum_{wtf} (dist_{wft} * wa_{wft} * wd[w] * dc *  ph * dk)		& \quad \quad \text{Stage 1} \\
+			 	&	+ \sum_{wtf} (dist_{wft} * dw_{wft} * dc *  ph * dk)				& \quad \quad \text{Stage 2} \\
+        				& 	+ \sum_{ft} (fb_{ft} * co_{t})
+\end{aligned}
+\end{equation}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% ROUTING PROBLEM
+%%%%%%%%%%%%%%%%
+\subsection{Recycling Truck Service Rotation (Traveling Salesperson Problem)}
+\subsubsection{Model Formulation}
+We solve this model with the following approach:  
+\begin{enumerate}[noitemsep]
+   \item Starting with 1 cluster split wind farms based on their location (using K-Means algorithm).
+   \item If a cluster where demand exceeds capacity exists, we increase the number of clusters by 1 and go to step 1. 
+   \item  Minimize travel cost for each cluster (using Miller-Tucker-Zemlin (MTZ) formulation)
+\end{enumerate}
+
+%%% SETS
+\subsubsection{Sets}
+\begin{itemize} [noitemsep]
+    \item $W$ - wind farm
+\end{itemize}
+
+
+%%% DATA PARAMETERS
+\subsubsection{Data Requirements}
+\begin{multicols}{2}
+\begin{itemize} [noitemsep]
+    \item $wx_{w}$ - longitude of wind farm $w$
+    \item $wy_{w}$ - latitude of wind farm $w$ 
+    \item $wb_{w}$ - yearly wind blades waste from $w$ 
+    \item $wdi_{w1w2}$ - distance between $w1$ and $w2$ 
+    \item $dco$ - driving cost per truck per km 
+    \item $tco$ - fixed cost of buying truck 
+    \item $tca$ - yearly truck capacity 
+    \item $ph$ - planning horizon (years) 
+    \item $dk$ - conversion of latitude/longitude to km
+\end{itemize} 
+\end{multicols}
+
+
+
+%%% Decision Variables
+\subsubsection{Decision Variables} 
+\begin{itemize} [noitemsep]
+    \item $vt_{w1w2}$ - binary variable indicating whether truck should go from wind farm $w1$ to farm $w2$
+    \item $vb_{w}$ - integer variable used in MTZ constraints for wind farm $w$ 
+\end{itemize}
+
+
+%%% Constraints
+\subsubsection{Constraints}
+Must enter location once
+\vspace{-5pt}
+\begin{equation}
+    \sum_{w1} vt_{w1w2} = 1 \quad \forall w2
+\end{equation}
+
+Must exit location once
+\vspace{-5pt}
+\begin{equation}
+    \sum_{w2} vt_{w1w2} = 1 \quad \forall w1
+\end{equation}
+
+Eliminate self subtour
+\vspace{-5pt}
+\begin{equation}
+    vt_{w1w2} = 0 \quad \forall w1, w2, w1=w2
+\end{equation}
+
+MTZ Constraints
+\vspace{-5pt}
+\begin{equation}
+\begin{aligned}
+    vu_{w1} - vu_{w2} + W vt_{w1w2} & \le &  W-1 & \quad \forall w1 \in \{2,W\}, w2 \in \{2,W\}, w1 \ne w2 \\ 
+	vu_{w} & \ge & 1 & \quad \forall w \in \{2,W\},  \\
+	vu_{w} & \le & W-1 & \quad \forall w \in \{2,W\},  
+\end{aligned}
+\end{equation}
+
+
+%%% Objective Function
+\subsubsection{Objective Function}
+\vspace{-15pt}
+\begin{equation}
+\begin{aligned}
+	min 	\quad &	ph * dk \sum_{w1w2}  (vt_{w1w2} * wdi_{w1w2} )
+\end{aligned}
+\end{equation}

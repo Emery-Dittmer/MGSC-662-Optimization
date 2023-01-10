@@ -1,0 +1,123 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=2cm]{geometry}
+\geometry{letterpaper}
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%SetFonts
+
+
+\title{MGSC-662-075 - Decision Analytics \\ Routing Problem}
+\author{}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%
+%%% DESCRIPTION
+%%%%%%%%%%%%%%%%
+\section*{Description}
+\subsection*{Intro}
+
+\subsection*{Solution Approach}
+We solve this model in a following approach. 
+\begin{enumerate}
+	\item Starting with 1 cluster split wind farms based on their location (using K-Means algorithm)
+	\item If a cluster where demand exceeds capacity exists, increase number of clusters by 1 and go to step 1
+	\item Minimize travel cost for each cluster (using Miller-Tucker-Zemlin (MTZ) formulation)
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%
+%%% CLUSTERING MODEL
+%%%%%%%%%%%%%%%%
+\section*{Clustering Model}
+The k-means clustering algoritm from Python scikit-learn package is used. With normal standardization used to scale locations of wind farms.
+
+
+%%%%%%%%%%%%%%%%
+%%% OPTIMIZATION MODEL
+%%%%%%%%%%%%%%%%
+\section*{Optimization Model}
+The following optimization model is used in step 3 of the solution approach
+
+%%%%%%%%%%%%%%%%
+%%% SETS
+%%%%%%%%%%%%%%%%
+\subsection*{Sets}
+$W$ - wind farm
+
+
+%%%%%%%%%%%%%%%%
+%%% DATA PARAMETERS
+%%%%%%%%%%%%%%%%
+\subsection*{Data Requirements}
+$wx_{w}$ - longitude of wind farm $w$ \\
+$wy_{w}$ - latitude of wind farm $w$ \\
+$wb_{w}$ - average yearly wind blades waste from wind farm $w$ \\ 
+$wdi_{w1w2}$ - manhattan distance between wind farm $w1$ and $w2$  \\
+
+$dco$ - driving cost per truck per km \\ 
+$tco$ - fixed cost of buying truck \\ 
+$tca$ - yearly truck capacity \\
+$ph$ - planning horizon (years) \\
+$dk$ - conversion of latitude/longitude to km
+
+
+%%%%%%%%%%%%%%%%
+%%% Decision Variables
+%%%%%%%%%%%%%%%%
+\subsection*{Decision Variables} 
+$vt_{w1w2}$ - binary variable indicating whether truck should go from wind farm $w1$ to farm $w2$ \\
+$vb_{w}$ - integer variable used in MTZ constraints for wind farm $w$ 
+
+
+%%%%%%%%%%%%%%%%
+%%% Constraints
+%%%%%%%%%%%%%%%%
+\subsection*{Constraints}
+
+%\subsubsection*{Flow Constraint}
+%$$ lw_{wy} = wa_{wy} - \sum_{ft} dw_{wfty} \quad \forall w, y = 1 $$
+%$$ lw_{wy} = lw_{w,y-1} + wa_{wy} - \sum_{ft} dw_{wfty} \quad \forall w, y \in \{ 2,...Y \} $$
+
+\subsubsection*{Must enter location once}
+\begin{equation}
+	\sum_{w1} vt_{w1w2} = 1 \quad \forall w2
+\end{equation}
+
+\subsubsection*{Must exit location once}
+\begin{equation}
+	\sum_{w2} vt_{w1w2} = 1 \quad \forall w1
+\end{equation}
+
+\subsubsection*{Self subtour}
+\begin{equation}
+	vt_{w1w2} = 0 \quad \forall w1, w2, w1=w2
+\end{equation}
+
+\subsubsection*{MTZ Constraints}
+\begin{equation}
+\begin{aligned}
+	vu_{w1} - vu_{w2} + W vt_{w1w2} & \le &  W-1 & \quad \forall w1 \in \{2,W\}, w2 \in \{2,W\}, w1 \ne w2 \\ 
+	vu_{w} & \ge & 1 & \quad \forall w \in \{2,W\},  \\
+	vu_{w} & \le & W-1 & \quad \forall w \in \{2,W\},  
+\end{aligned}
+\end{equation}
+
+%%%%%%%%%%%%%%%%
+%%% Objective Function
+%%%%%%%%%%%%%%%%
+\subsection*{Objective Function}
+\begin{equation}
+\begin{aligned}
+	min 	\quad &	ph * dk \sum_{w1w2}  (vt_{w1w2} * wdi_{w1w2} )
+\end{aligned}
+\end{equation}
+
+
+
+\end{document}  

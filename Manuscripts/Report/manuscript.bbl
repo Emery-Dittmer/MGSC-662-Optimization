@@ -1,0 +1,579 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{RN19}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1f61bd5c58a7c66ecc3434d06a3345fa}{%
+           family={Deutch},
+           familyi={D\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \strng{fullhash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \strng{bibnamehash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \strng{authorbibnamehash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \strng{authornamehash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \strng{authorfullhash}{1f61bd5c58a7c66ecc3434d06a3345fa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2542-4351}
+      \field{journaltitle}{Joule}
+      \field{number}{11}
+      \field{title}{Is net zero carbon 2050 possible?}
+      \field{type}{Journal Article}
+      \field{volume}{4}
+      \field{year}{2020}
+      \field{pages}{2237\bibrangedash 2240}
+      \range{pages}{4}
+    \endentry
+    \entry{RN18}{article}{}
+      \name{author}{6}{}{%
+        {{hash=6effeba3f3955faee88cb0623cee2fd3}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e3faf4147312879cd2790f77f01d0011}{%
+           family={Mai},
+           familyi={M\bibinitperiod},
+           given={Trieu},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bd4210a3c4952baaf04197bf09d57d8a}{%
+           family={Lantz},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0a8504aebd6cfdab500d171ca4f185be}{%
+           family={Harrison-Atlas},
+           familyi={H\bibinithyphendelim A\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c1b2825edf9a01dba220090e34548cc1}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Travis},
+           giveni={T\bibinitperiod}}}%
+        {{hash=342fca8cc1a01823832e691065d74ea5}{%
+           family={Maclaurin},
+           familyi={M\bibinitperiod},
+           given={Galen},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ec80288eb5ca9704b2abe30bac0c0eb}
+      \strng{fullhash}{24d7e758332f7a20f3dd1a22305ae4b5}
+      \strng{bibnamehash}{24d7e758332f7a20f3dd1a22305ae4b5}
+      \strng{authorbibnamehash}{24d7e758332f7a20f3dd1a22305ae4b5}
+      \strng{authornamehash}{2ec80288eb5ca9704b2abe30bac0c0eb}
+      \strng{authorfullhash}{24d7e758332f7a20f3dd1a22305ae4b5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0360-5442}
+      \field{journaltitle}{Energy}
+      \field{title}{Land use and turbine technology influences on wind potential in the United States}
+      \field{type}{Journal Article}
+      \field{volume}{223}
+      \field{year}{2021}
+      \field{pages}{120044}
+      \range{pages}{1}
+    \endentry
+    \entry{RN1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=990edfe4b6ebd8690d9c5c56c2f15108}{%
+           family={Mishnaevsky\bibnamedelima Jr},
+           familyi={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \strng{fullhash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \strng{bibnamehash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \strng{authorbibnamehash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \strng{authornamehash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \strng{authorfullhash}{990edfe4b6ebd8690d9c5c56c2f15108}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1996-1944}
+      \field{journaltitle}{Materials}
+      \field{number}{9}
+      \field{title}{Root causes and mechanisms of failure of wind turbine blades: Overview}
+      \field{type}{Journal Article}
+      \field{volume}{15}
+      \field{year}{2022}
+      \field{pages}{2959}
+      \range{pages}{1}
+    \endentry
+    \entry{RN3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b061208c630c49686e23b06cbf78d913}{%
+           family={Solutions},
+           familyi={S\bibinitperiod},
+           given={Global\bibnamedelima Fiberglass},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b061208c630c49686e23b06cbf78d913}
+      \strng{fullhash}{b061208c630c49686e23b06cbf78d913}
+      \strng{bibnamehash}{b061208c630c49686e23b06cbf78d913}
+      \strng{authorbibnamehash}{b061208c630c49686e23b06cbf78d913}
+      \strng{authornamehash}{b061208c630c49686e23b06cbf78d913}
+      \strng{authorfullhash}{b061208c630c49686e23b06cbf78d913}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Fiberglass Services}
+      \field{type}{Web Page}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.globalfiberglassinc.com
+      \endverb
+      \verb{url}
+      \verb https://www.globalfiberglassinc.com
+      \endverb
+    \endentry
+    \entry{RN10}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1cc90f07fdbe15a736393dfe37fe7676}{%
+           family={Heng},
+           familyi={H\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7773c0c3120f88ca252f159651c30cde}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Fanran},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2b50f848357bfe565d6e4f9832b3364b}{%
+           family={McKechnie},
+           familyi={M\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b9d13fc1d8eefeb8ecbacc4d2823d39}
+      \strng{fullhash}{77223be70e532ff7ab06cc5e2c954926}
+      \strng{bibnamehash}{77223be70e532ff7ab06cc5e2c954926}
+      \strng{authorbibnamehash}{77223be70e532ff7ab06cc5e2c954926}
+      \strng{authornamehash}{5b9d13fc1d8eefeb8ecbacc4d2823d39}
+      \strng{authorfullhash}{77223be70e532ff7ab06cc5e2c954926}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0956-053X}
+      \field{journaltitle}{Waste Management}
+      \field{title}{Wind turbine blade wastes and the environmental impacts in Canada}
+      \field{type}{Journal Article}
+      \field{volume}{133}
+      \field{year}{2021}
+      \field{pages}{59\bibrangedash 70}
+      \range{pages}{12}
+    \endentry
+    \entry{RN2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=da73c19b234433dace4c0b97a265594d}{%
+           family={Gouldrick},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{da73c19b234433dace4c0b97a265594d}
+      \strng{fullhash}{da73c19b234433dace4c0b97a265594d}
+      \strng{bibnamehash}{da73c19b234433dace4c0b97a265594d}
+      \strng{authorbibnamehash}{da73c19b234433dace4c0b97a265594d}
+      \strng{authornamehash}{da73c19b234433dace4c0b97a265594d}
+      \strng{authorfullhash}{da73c19b234433dace4c0b97a265594d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What happens to end-of-life wind turbine blades?}
+      \field{type}{Web Page}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.ny1.com/nyc/all-boroughs/weather/2022/08/15/what-happens-to-end-of-life-windmill-blades-
+      \endverb
+      \verb{url}
+      \verb https://www.ny1.com/nyc/all-boroughs/weather/2022/08/15/what-happens-to-end-of-life-windmill-blades-
+      \endverb
+    \endentry
+    \entry{RN4}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5e8b1b58057d8ace50f29ce277c1d3da}{%
+           family={Aras},
+           familyi={A\bibinitperiod},
+           given={Necati},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8087c353330ec19a3fbf0f25df96226a}{%
+           family={Orbay},
+           familyi={O\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=262e429d14047dfc2418ed5b8e8358cb}{%
+           family={Altinel},
+           familyi={A\bibinitperiod},
+           given={I\bibnamedelima Kuban},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{153be6ce07ae16e3630edb066ba4db90}
+      \strng{fullhash}{a60fd0ff3d062ec0f3c562230c2db871}
+      \strng{bibnamehash}{a60fd0ff3d062ec0f3c562230c2db871}
+      \strng{authorbibnamehash}{a60fd0ff3d062ec0f3c562230c2db871}
+      \strng{authornamehash}{153be6ce07ae16e3630edb066ba4db90}
+      \strng{authorfullhash}{a60fd0ff3d062ec0f3c562230c2db871}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1476-9360}
+      \field{journaltitle}{Journal of the Operational Research Society}
+      \field{number}{1}
+      \field{title}{Efficient heuristics for the rectilinear distance capacitated multi-facility Weber problem}
+      \field{type}{Journal Article}
+      \field{volume}{59}
+      \field{year}{2008}
+      \field{pages}{64\bibrangedash 79}
+      \range{pages}{16}
+    \endentry
+    \entry{RN5}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a69ea14a401a455e4e8cff2c77442caa}{%
+           family={Transportation},
+           familyi={T\bibinitperiod},
+           given={Ontario\bibnamedelima Container},
+           giveni={O\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a69ea14a401a455e4e8cff2c77442caa}
+      \strng{fullhash}{a69ea14a401a455e4e8cff2c77442caa}
+      \strng{bibnamehash}{a69ea14a401a455e4e8cff2c77442caa}
+      \strng{authorbibnamehash}{a69ea14a401a455e4e8cff2c77442caa}
+      \strng{authornamehash}{a69ea14a401a455e4e8cff2c77442caa}
+      \strng{authorfullhash}{a69ea14a401a455e4e8cff2c77442caa}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{7 December 2022}
+      \field{title}{Average Pricing for Full Truckload Shipping in Ontario}
+      \field{type}{Web Page}
+      \field{volume}{2022}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://octi.ca/average-pricing-for-full-truckload-shipping-in-ontario/
+      \endverb
+      \verb{url}
+      \verb https://octi.ca/average-pricing-for-full-truckload-shipping-in-ontario/
+      \endverb
+    \endentry
+    \entry{RN6}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ff756a62dcf34f4ee7912cd24530e709}{%
+           family={Quebec},
+           familyi={Q\bibinitperiod},
+           given={Direction\bibnamedelimb du\bibnamedelimb transport\bibnamedelimb routier\bibnamedelimb des\bibnamedelimb marchandises\bibnamedelima du},
+           giveni={D\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim t\bibinitperiod\bibinitdelim r\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim m\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff756a62dcf34f4ee7912cd24530e709}
+      \strng{fullhash}{ff756a62dcf34f4ee7912cd24530e709}
+      \strng{bibnamehash}{ff756a62dcf34f4ee7912cd24530e709}
+      \strng{authorbibnamehash}{ff756a62dcf34f4ee7912cd24530e709}
+      \strng{authornamehash}{ff756a62dcf34f4ee7912cd24530e709}
+      \strng{authorfullhash}{ff756a62dcf34f4ee7912cd24530e709}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Road vehicle load and size limits GUIDE}
+      \field{type}{Government Document}
+      \verb{urlraw}
+      \verb https://www.transports.gouv.qc.ca/en/camionnage/charges-dimensions/Documents/guide-load-size.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.transports.gouv.qc.ca/en/camionnage/charges-dimensions/Documents/guide-load-size.pdf
+      \endverb
+    \endentry
+    \entry{RN7}{article}{}
+      \name{author}{3}{}{%
+        {{hash=516977d97c8a35a4fd507486fc0188d7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Lin},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3c9389fd27816fc8a622c41814860f8c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Hongxing},
+           giveni={H\bibinitperiod}}}%
+        {{hash=10ccc4f1cf860327f36543c2b71591a0}{%
+           family={Burnett},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{85f9d0fd72ba95893fbd1c6fb49d9933}
+      \strng{fullhash}{163a93330ddc83c34d4512d9b0add6c1}
+      \strng{bibnamehash}{163a93330ddc83c34d4512d9b0add6c1}
+      \strng{authorbibnamehash}{163a93330ddc83c34d4512d9b0add6c1}
+      \strng{authornamehash}{85f9d0fd72ba95893fbd1c6fb49d9933}
+      \strng{authorfullhash}{163a93330ddc83c34d4512d9b0add6c1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0960-1481}
+      \field{journaltitle}{Renewable Energy}
+      \field{number}{1}
+      \field{title}{Investigation on wind power potential on Hong Kong islands—an analysis of wind power and wind turbine characteristics}
+      \field{type}{Journal Article}
+      \field{volume}{27}
+      \field{year}{2002}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+    \endentry
+    \entry{RN8}{article}{}
+      \name{author}{5}{}{%
+        {{hash=9e4072a1f470a39ff3152a066385d4d6}{%
+           family={Tjiu},
+           familyi={T\bibinitperiod},
+           given={Willy},
+           giveni={W\bibinitperiod}}}%
+        {{hash=739f5e0b6717203cd82ea1148648e1e0}{%
+           family={Marnoto},
+           familyi={M\bibinitperiod},
+           given={Tjukup},
+           giveni={T\bibinitperiod}}}%
+        {{hash=179513e06d909c01eb4fc4ffeb88f79b}{%
+           family={Mat},
+           familyi={M\bibinitperiod},
+           given={Sohif},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b4a6c3c1ca107d1db3d22c24ca587789}{%
+           family={Ruslan},
+           familyi={R\bibinitperiod},
+           given={Mohd\bibnamedelima Hafidz},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=2eec3b8291be5a0fc5113b77d4cb065b}{%
+           family={Sopian},
+           familyi={S\bibinitperiod},
+           given={Kamaruzzaman},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a50f16c1f142d26225a81fef387b6548}
+      \strng{fullhash}{f98406d8aa81ae27fb3832c9c30caf51}
+      \strng{bibnamehash}{f98406d8aa81ae27fb3832c9c30caf51}
+      \strng{authorbibnamehash}{f98406d8aa81ae27fb3832c9c30caf51}
+      \strng{authornamehash}{a50f16c1f142d26225a81fef387b6548}
+      \strng{authorfullhash}{f98406d8aa81ae27fb3832c9c30caf51}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0960-1481}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Darrieus vertical axis wind turbine for power generation II: Challenges in HAWT and the opportunity of multi-megawatt Darrieus VAWT development}
+      \field{type}{Journal Article}
+      \field{volume}{75}
+      \field{year}{2015}
+      \field{pages}{560\bibrangedash 571}
+      \range{pages}{12}
+    \endentry
+    \entry{RN9}{article}{}
+      \name{author}{1}{}{%
+        {{hash=61ca69127cddaf1e447792570a45352b}{%
+           family={Potter},
+           familyi={P\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{61ca69127cddaf1e447792570a45352b}
+      \strng{fullhash}{61ca69127cddaf1e447792570a45352b}
+      \strng{bibnamehash}{61ca69127cddaf1e447792570a45352b}
+      \strng{authorbibnamehash}{61ca69127cddaf1e447792570a45352b}
+      \strng{authornamehash}{61ca69127cddaf1e447792570a45352b}
+      \strng{authorfullhash}{61ca69127cddaf1e447792570a45352b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Evening Tribune}
+      \field{title}{New $3.3M facility planned in Bath will recycle wind turbine blades and other materials}
+      \field{type}{Journal Article}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.eveningtribune.com/story/business/2022/08/10/planned-bath-facility-recycle-windmill-blades/65392284007/
+      \endverb
+      \verb{url}
+      \verb https://www.eveningtribune.com/story/business/2022/08/10/planned-bath-facility-recycle-windmill-blades/65392284007/
+      \endverb
+    \endentry
+    \entry{RN13}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a57de61a4bc882239cc806ee2db7a21a}{%
+           family={Fonte},
+           familyi={F\bibinitperiod},
+           given={Rosario},
+           giveni={R\bibinitperiod}}}%
+        {{hash=197801421b7b3f836c6e8c903ab5e14a}{%
+           family={Xydis},
+           familyi={X\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{91f38a60a73c631659a95d2edcc610e8}
+      \strng{fullhash}{91f38a60a73c631659a95d2edcc610e8}
+      \strng{bibnamehash}{91f38a60a73c631659a95d2edcc610e8}
+      \strng{authorbibnamehash}{91f38a60a73c631659a95d2edcc610e8}
+      \strng{authornamehash}{91f38a60a73c631659a95d2edcc610e8}
+      \strng{authorfullhash}{91f38a60a73c631659a95d2edcc610e8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0301-4797}
+      \field{journaltitle}{Journal of Environmental Management}
+      \field{title}{Wind turbine blade recycling: An evaluation of the European market potential for recycled composite materials}
+      \field{type}{Journal Article}
+      \field{volume}{287}
+      \field{year}{2021}
+      \field{pages}{112269}
+      \range{pages}{1}
+    \endentry
+    \entry{RN16}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a42dbd6b49f5a257f093f16677723b25}{%
+           family={Canada},
+           familyi={C\bibinitperiod},
+           given={Natural\bibnamedelima Resources},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a42dbd6b49f5a257f093f16677723b25}
+      \strng{fullhash}{a42dbd6b49f5a257f093f16677723b25}
+      \strng{bibnamehash}{a42dbd6b49f5a257f093f16677723b25}
+      \strng{authorbibnamehash}{a42dbd6b49f5a257f093f16677723b25}
+      \strng{authornamehash}{a42dbd6b49f5a257f093f16677723b25}
+      \strng{authorfullhash}{a42dbd6b49f5a257f093f16677723b25}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Canadian Wind Turbine Database}
+      \field{type}{Dataset}
+      \field{year}{2020}
+    \endentry
+    \entry{RN12}{article}{}
+      \name{author}{3}{}{%
+        {{hash=892bf18c371629747a63d158ec4fd387}{%
+           family={Hogan},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=546540970954be924aaf528d40eeb4da}{%
+           family={Morrison},
+           familyi={M\bibinitperiod},
+           given={Megan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b0cb4e8aeb2122e0ca78b3310f03b7da}{%
+           family={Desai},
+           familyi={D\bibinitperiod},
+           given={Anand},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{20147509d43813f9c25c45fc4e62f3ee}
+      \strng{fullhash}{b3d125cec769d4b1150b072ad9319297}
+      \strng{bibnamehash}{b3d125cec769d4b1150b072ad9319297}
+      \strng{authorbibnamehash}{b3d125cec769d4b1150b072ad9319297}
+      \strng{authornamehash}{20147509d43813f9c25c45fc4e62f3ee}
+      \strng{authorfullhash}{b3d125cec769d4b1150b072ad9319297}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{3319686151}
+      \field{journaltitle}{Kanerva’s Occupational Dermatology}
+      \field{title}{Fiberglass, Dusts}
+      \field{type}{Journal Article}
+      \field{year}{2020}
+      \field{pages}{543\bibrangedash 557}
+      \range{pages}{15}
+    \endentry
+    \entry{RN14}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eb90d9d2c050a9278fe9a17eafb804c7}{%
+           family={Stephanie\bibnamedelima Cairns},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Geoff\bibnamedelima McCarney},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \strng{fullhash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \strng{bibnamehash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \strng{authorbibnamehash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \strng{authornamehash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \strng{authorfullhash}{eb90d9d2c050a9278fe9a17eafb804c7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Smart Prosperity Insitute}
+      \field{title}{SOLAR AND WIND ENERGY IN CANADA VALUE RECOVERY AND END-OF-LIFE CONSIDERATIONS}
+      \field{type}{Journal Article}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://institute.smartprosperity.ca/sites/default/files/Policy%20Brief%20-%202021%20-%20Solar%20Wind%20-%20October20.pdf
+      \endverb
+      \verb{url}
+      \verb https://institute.smartprosperity.ca/sites/default/files/Policy%20Brief%20-%202021%20-%20Solar%20Wind%20-%20October20.pdf
+      \endverb
+    \endentry
+    \entry{RN17}{article}{}
+      \name{author}{1}{}{%
+        {{hash=04fe29c7825a0c6770a45c7f6d35ea99}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \strng{fullhash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \strng{bibnamehash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \strng{authorbibnamehash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \strng{authornamehash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \strng{authorfullhash}{04fe29c7825a0c6770a45c7f6d35ea99}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{E-waste: Implication, Regulations, and Management in India and Current Global Best Practices}
+      \field{title}{Global e-waste growth}
+      \field{type}{Journal Article}
+      \field{year}{2008}
+      \field{pages}{3\bibrangedash 22}
+      \range{pages}{20}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

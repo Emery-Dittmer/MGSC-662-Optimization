@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%
+%%% NUMERICAL INTERPRETATION AND RESULTS
+%%%%%%%%%%%%%%%%
+\section{NUMERICAL INTERPRETATION AND RESULTS}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% DATASET DESCRIPTION
+%%%%%%%%%%%%%%%%
+\subsection{Dataset description}
+\label{subsection:dataset_description}
+To apply the model to the real world, we investigated existing data sources and used a combination of data sources. We found that Canada maintains a database of all wind turbines in the country, and several commercial data products exist that demonstrate the location of wind farms by country. However, these datasets were older and did not completely account for new planned locations. 
+
+We partnered with Professor Javad to access a more detailed data set for wind farms. This data set is a comprehensive list of all wind farms across Canada that includes unique identifiers for each wind farm, the commissioning date, the number of wind turbines in the farm, and geographic coordinates for all wind farms. Some data cleaning was required for missing fields. 
+
+Curiously, our research uncovered a lack of standard measurements in the wind turbine recycling industry. While this is a new industry, this can be a major challenge when investigating standard metrics. For instance, fiberglass recycling facilities, transportation, and farms refer to the number of blades, weight in kg, or the number of turbines, respectively \cite{RN9} \cite{RN13} \cite{RN16}. To standardize the measurements, we converted all units to metric tonnes based on the above assumptions. Additionally, since we are assuming a steady state system where the supply of blades and the recycling capacity even out over time, measures are in annual averages.  
+
+To standardize the dataset’s annual averages, we added several calculated fields. First, we calculated the number of blades per wind farm, we are assuming that there are 3 blades per turbine as is standard for wind turbines in industry. Next, we calculated the total weight of the wind turbines assuming 36 tonnes per blade. This gave us the total weight of the blades on the wind farm. From the total weight of the blades, we calculated the annual mean waste and deliveries to the Recycling facilities. The yearly deliveries are simply the total weight of broken blades divided by the total capacity of the trucks allowed on Canadian roads of 62.5 tonnes divided by an assumed 20-year lifespan. This then provides the annual number of trips required for each wind farm, which is rounded up. The yearly deliveries and waste are used in the model as constraining variables that help determine the optimal facility numbers and distances. 
+\begin{equation}
+    \text{Weight (tonnes)} = \text{Blades} * 36 \\
+\end{equation}
+\begin{equation}
+    \text{Annual Deliveries} = \frac{NBlades *\text{Weight}}{63.5} * \frac{1}{\text{20 years}}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%
+%%% CALCULATION & ESTIMATION  OF PARAMETERS, EXPERIMENT SETTINGS
+%%%%%%%%%%%%%%%%
+\subsection{Calculation \& Estimation of Parameters, Experiment Settings}
+This model was run on an 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz processor with 16GB of RAM on a 64 bit operating system with Gurobi version 10.0. The location optimization problem is composed of 3,879 variables with 2,907 continuous and 972 binary. With 4,931 constraints 963 quadratic objective terms. The model is non-linear therefore we placed a time limit of 60 minutes (3600 seconds). The best objective found was 57.00, best bound –31.51, and an optimality gap of 155.27\%   
+
+%%%%%%%%%%%%%%%%
+%%% RECYCLING FACILITIES
+%%%%%%%%%%%%%%%%
+\subsubsection{Recycling Facilities Locations Optimization, cost, and coordinates}
+As a result of the optimization model, we found 6 optimal locations to set up recycling facilities in Ontario (Table \ref{table:on_fl}). The model produced 3 Type 2 facilities, and 3 Type 3 facilities which have a capacity of 4,500 and 6,000 annual tonnes respectively.  
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c c | c c c } \hline
+     Facility Number & Facility Type & Longitude & Latitude & Max Capacity (tonnes) \\ \hline\hline
+     1 & Type 2 & 44.09 & -80.308 & 4,500\\ 
+     2 & Type 2 & 43.13348 & -81.72043 & 4,500\\
+     3 & Type 2 & 42.273 & -82.26502 & 4,500\\
+     4 & Type 3 & 46.612 & -84.492 & 6,000\\
+     5 & Type 3 & 43.1772 & -81.636 & 6,000\\ 
+     6 & Type 3 & 42.866 & -79.951 & 6,000 \\ \hline
+    \end{tabular}
+    \caption{Ontario Only Recycling Facility Location}
+    \label{table:on_fl}
+\end{table}
+
+The locations of the facilities are displayed on the map of Ontario and windfarms in Figure \ref{fig:fig_on}. Here the dark green points are the wind farms, the type 2 facilities appear in purple, and the type 3 facilities are shown in orange.  
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graphics/fig_on.jpeg}
+    \caption{Ontario Only Recycling Facility Location}
+    \label{fig:fig_on}
+\end{figure}
+
+In the end, the cost of building those 6 recycling facilities is \$33.24 million, to what needs to be added the cost of delivery over 50 years of \$23.76 million. For a total cost of \$57 million for the next 50 years. 
+
+
+
+
+%%%%%%%%%%%%%%%%
+%%% TRUCKS
+%%%%%%%%%%%%%%%%
+\subsubsection{Recycling Truck Service Rotation}
+This routing problem is a travelling salesman type optimization. Using an iterative process based on the minimum number of clusters (equivalent to number of recycling trucks) the wind farms in Ontario were split between 3 clusters as shown in Figure \ref{fig:fig_cluster3}.  Each cluster has one dedicated vehicle. The model balances the high fixed cost of the vehicle (\$1 million) the demanded capacity and travel costs. 
+
+As a result, we estimate a fixed cost of \$3 million with a travel cost over 50 years of \$8.5 million, for a total of \$11.5 million.  
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c | c c } \hline
+     Cluster Number & Demand (number of blades) & Total Travel Distance (km) \\ \hline\hline
+     1 & 176.7 & 976.8 \\
+     2 & 187.7 & 2,567.3 \\
+     3 & 26.6  & 2,187.8 \\ \hline
+    \end{tabular}
+    \caption{Ontario Only Recycling Truck Service Rotation}
+    \label{table:on_tsp}
+\end{table}
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graphics/fig_cluster3.jpeg}
+    \caption{Ontario Only Recycling Truck Service Rotation}
+    \label{fig:fig_cluster3}
+\end{figure}

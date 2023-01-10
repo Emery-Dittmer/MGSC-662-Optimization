@@ -1,0 +1,92 @@
+\documentclass[11pt, oneside, titlepage]{article}  
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\geometry{letterpaper}
+
+\usepackage{indentfirst} % INDENTS FIRST PARAGRAPH
+\usepackage{graphicx}
+\usepackage{amssymb} 
+\usepackage{amsmath} % better math stuff
+\usepackage{multicol} % columns in text
+\usepackage{enumitem} % less space between bullets
+
+% ALLOWS FOR HYPERLINKS
+\usepackage{hyperref}
+\hypersetup{hidelinks}      
+
+
+% TABLE OF CONTENTS
+\renewcommand*\contentsname{TABLE OF CONTENTS}
+%\setcounter{tocdepth}{2}
+
+
+% HEADERS & FOOTERS & COLORS
+\usepackage{fancyhdr}
+\usepackage{etoolbox,fancyhdr,xcolor}
+\newcommand{\headrulecolor}[1]{\patchcmd{\headrule}{\hrule}{\color{#1}\hrule}{}{}} %ALLOW COLOR CHANGE
+\newcommand{\footrulecolor}[1]{\patchcmd{\footrule}{\hrule}{\color{#1}\hrule}{}{}} %ALLOW COLOR CHANGE
+\pagestyle{fancy}
+\fancyhf{}% Clear header/footer
+\renewcommand{\headrulewidth}{2pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.5pt}% Default \footrulewidth is 0pt
+\headrulecolor{red!70}% Set header rule colour to 70% red.
+\fancyfoot[R]{Page \thepage} % PAGE NUMBER
+\fancyhead[R]{\includegraphics[height=0.8cm]{graphics/mcgill_header.jpeg}} % MCGILL LOGO
+
+
+% SECTION COLORS
+\usepackage{xcolor}
+\usepackage{sectsty}
+\sectionfont{\color{red!70}}
+
+
+% TITLE PAGE
+\usepackage{pdfpages}
+\title{MGSC-662-075 - Decision Analytics \\ 
+    Routing Problem}
+\author{Emery Dittmer - 260658030\\ 
+    Ben Meiga - 260866790 \\ 
+    Lucie Peccoux - 261087296 \\ 
+    Konstantin Volodin - 261083570}
+%\date{}							% Activate to display a given date or no date
+
+
+% BIBLIOGRAPHY
+\usepackage[backend=biber, style=chem-acs]{biblatex}
+\addbibresource{bib.bib} %Import the bibliography file
+
+
+%%%%% BEGIN DOCUMENT
+\begin{document}
+\renewcommand\refname{REFERENCES} 
+\baselineskip=15pt
+%\maketitle
+\begin{minipage}{\textwidth}
+    \includepdf{graphics/firstpage}
+\end{minipage}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty} % PREVENTS NUMBERING
+\clearpage\setcounter{page}{1} % Start including page numbers from here
+
+%%%%% INTRODUCTION
+\newpage
+\input{sections/introduction.tex}
+
+%%%%% PROBLEM DESCRIPTION
+\input{sections/problem_description.tex}
+
+%%%%% NUMERICAL INTERPRETATION
+\input{sections/numerical_interpretation.tex}
+
+%%%%% PROBLEM EXTENSIONS
+\input{sections/problem_extension.tex}
+
+%%%%% CONCLUSION
+\input{sections/conclusion.tex}
+
+%%%%% BIBLIOGRAPHY
+\newpage
+\printbibliography
+
+\end{document}  

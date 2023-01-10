@@ -1,0 +1,33 @@
+\contentsline {section}{INTRODUCTION}{1}{section*.2}%
+\contentsline {section}{\numberline {1}PROBLEM DESCRIPTION AND FORMULATION}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Problem Description \& Scope}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Model Assumptions}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Transportation}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Waste Details}{2}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Facilities}{2}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Cutting Trucks}{3}{subsubsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.3}Model Limitations}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Recycling Facilities Location Problem }{3}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Model Formulation}{3}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Sets}{3}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Data Requirements}{4}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4}Decision Variables}{4}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.5}Constraints}{4}{subsubsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.6}Objective Function}{5}{subsubsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.5}Recycling Truck Service Rotation (Traveling Salesperson Problem)}{5}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Model Formulation}{5}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Sets}{5}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}Data Requirements}{5}{subsubsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.4}Decision Variables}{5}{subsubsection.1.5.4}%
+\contentsline {subsubsection}{\numberline {1.5.5}Constraints}{5}{subsubsection.1.5.5}%
+\contentsline {subsubsection}{\numberline {1.5.6}Objective Function}{6}{subsubsection.1.5.6}%
+\contentsline {section}{\numberline {2}NUMERICAL INTERPRETATION AND RESULTS}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Dataset description}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Calculation \& Estimation of Parameters, Experiment Settings}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Recycling Facilities Locations Optimization, cost, and coordinates}{7}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Recycling Truck Service Rotation}{8}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}PROBLEM EXTENSIONS}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Per Province/Territory FLP}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Federal FLP: Pan-Canadian Optimization}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Year-by-year extension}{11}{subsection.3.3}%
+\contentsline {section}{CONCLUSION}{12}{section*.3}%
